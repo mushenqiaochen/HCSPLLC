@@ -2,7 +2,14 @@
 <html lang="en" dir="ltr">
  
 <head>
- 
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
   <style>
 *{cursor:url(cursor.cur),default; }
 </style>
@@ -14,15 +21,26 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
+
  <title>I Carpet Cleaning</title>
  
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     </head>
 <body style="background-color:;">
 
+
        <style>
-   
+   footer {
+            background-color: white;
+            color: #fff;
+            text-align: center;
+            
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+}
 a:link {
   color: black;
   background-color: transparent;
@@ -47,6 +65,20 @@ h1{
   font-size:20px;
   color:white;
 }
+
+
+h5{
+  font-size:10px;
+  color:black;
+}
+h4{
+  font-size:20px;
+  color:black;
+}
+
+
+
+
          p{
   font-size:90%;
   color:black;
@@ -70,6 +102,7 @@ h2 {
   right: %;
 }
 
+
 .logo {
   width:2px;
 }
@@ -77,15 +110,57 @@ h2 {
   
          ｝
 
-    </style>
+
+ 
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 150vh; /* Increase body height for scrolling effect */
+    }
 
 
-  <style>
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
 
-</style>
+
+    section.visible {
+      opacity: 1;
+    }
+  </style>
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var sections = document.querySelectorAll("section");
+
+
+    var observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.5 });
+
+
+    sections.forEach(function(section) {
+      observer.observe(section);
+    });
+  });
+</script>
+
+
      
 <div class="jumbotron">
     <div class="row">
+
 
         <div>
            
@@ -139,89 +214,35 @@ h2 {
     </table>
                </div>
    </div></div></div>
-   
-<div class="jumbotron">
-    <div class="row">
+  
 
-        <div>
-           
-            <div id="div1">
-           
-                <table width="100%" cellpadding="0" bgcolor="" bordercolor="" >
-                <tr>
-             <td>  <center>
-                
-                 
-                 
-                        <a href=”tel:6692530123″><font color="" size="10">CALL
-         </font> </a>
-          <font size=""><P>click to call</P></font>
-       
-            </center>
-            </td>
-         
-            </tr>
-            </table>            </div>
-   </div></div></div>
-<br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br>
-<br><br>
-
-       
+<section>
+    <h1>Section 1</h1>
+    <p>This is the first section.</p>
+  </section>
 
 
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br>
+  <section>
+    <h1>Section 2</h1>
+    <p>This is the second section.</p>
+  </section>
+
+
+  <section>
+    <h1>Section 3</h1>
+    <p>This is the third section.</p>
+  </section>
+
+
+    <footer>
+
+
+<h4>预约电话：1234123123123</h4>
+        <h5>版权所有 &copy; 2023 I Carpet Cleaning  老蒋地毯</h5>
+
+
+    </footer>
+
 
 </body>
 </html>
