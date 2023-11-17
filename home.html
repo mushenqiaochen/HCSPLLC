@@ -12,6 +12,7 @@
 
   <style>
 *{cursor:url(cursor.cur),default; }
+
 footer {
             background-color: white;
             color: #fff;
@@ -106,6 +107,7 @@ h2 {
       opacity: 1;
     }
   </style>
+
 <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -124,10 +126,7 @@ h2 {
 <body>
 
 
-       
-  
-
-
+      
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     var sections = document.querySelectorAll("section");
@@ -146,7 +145,42 @@ h2 {
       observer.observe(section);
     });
   });
+
+  // JavaScript to toggle visibility based on screen width
+  document.addEventListener("DOMContentLoaded", function() {
+      var desktopDirectory = document.getElementById("desktopDirectory");
+      var mobileDirectory = document.getElementById("mobileDirectory");
+
+      // Check the initial screen width
+      if (window.innerWidth >= 768) {
+        desktopDirectory.style.display = "block";
+      } else {
+        mobileDirectory.style.display = "block";
+      }
+
+      // Update visibility on window resize
+      window.addEventListener("resize", function() {
+        if (window.innerWidth >= 768) {
+          desktopDirectory.style.display = "block";
+          mobileDirectory.style.display = "none";
+        } else {
+          desktopDirectory.style.display = "none";
+          mobileDirectory.style.display = "block";
+        }
+
 </script>
+
+
+
+
+
+
+
+
+
+
+<div id="desktopDirectory">
+
 
 <div class="jumbotron">
   <div class="row">
@@ -207,26 +241,37 @@ h2 {
   <img src="im.png" width="100%">
   </section>
 
-
   <section>
-   
   </section>
-
-
+  
   <section>
     <h1>Section 3</h1>
     <p>This is the third section.</p>
   </section>
-
-
     <footer>
-
-
 <h4>                    预约电话：1234123123123</h4>
         <h5>                    版权所有 &copy; 2023 I Carpet Cleaning  老蒋地毯</h5>
-
-
     </footer>
+
+</div>
+
+
+
+
+ <!-- Mobile Directory Structure -->
+ <div id="mobileDirectory">
+  <h1>Mobile Directory</h1>
+  <ul>
+    <li>File A</li>
+    <li>File B</li>
+    <li>File C</li>
+  </ul>
+</div>
+
+
+
+
+
 
 
 </body>
