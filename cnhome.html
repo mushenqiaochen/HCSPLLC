@@ -1,16 +1,18 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+ 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Directory Structure</title>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
   <style>
-    /* Common styles for both desktop and mobile */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
+
 
     /* Styles specific to desktop */
     @media (min-width: 768px) {
@@ -25,31 +27,272 @@
         display: none;
       }
     }
+
+*{cursor:url(cursor.cur),default; }
+
+footer {
+            background-color: white;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+}
+            
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: black ;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+h1{
+  font-size:20px;
+  color:white;
+}
+
+h3{
+  font-size:20px;
+  color:black;
+}
+
+h5{
+  font-size:10px;
+  color:black;
+  right: 20%;
+}
+h4{
+  font-size:20px;
+  color:black;
+  right: 20%;
+}
+
+
+
+         p{
+  font-size:90%;
+  color:black;
+}
+ 
+h2 {
+  font-size: 20px;
+}
+
+        #div2 {
+  position: fixed;
+  background: none;
+  color: white;
+    top: 0%;
+  right: 0%;
+}
+
+ 
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      /*height: 150vh; /* Increase body height for scrolling effect */
+    }
+
+
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+
+    section.visible {
+      opacity: 1;
+    }
+
+    nav {
+      background-color: white;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    nav a:hover, .dropdown:hover .dropbtn {
+      background-color: white;
+    }
+
+    .dropdown-content a:hover {
+      background-color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+      .navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 18px 24px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    }
+    #div1 {
+  position: fixed;
+  background: none;
+  color: white;
+    top: 80%;
+  right: 10%;
+}
   </style>
-</head>
+
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" 
+href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+ <title>I Carpet Cleaning</title>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    </head>
 <body>
 
-  <!-- Desktop Directory Structure -->
-  <div id="desktopDirectory">
-    <h1>Desktop Directory</h1>
-    <ul>
-      <li>File 1</li>
-      <li>File 2</li>
-      <li>File 3</li>
-    </ul>
-  </div>
 
-  <!-- Mobile Directory Structure -->
-  <div id="mobileDirectory">
-    <h1>Mobile Directory</h1>
-    <ul>
-      <li>File A</li>
-      <li>File B</li>
-      <li>File C</li>
-    </ul>
-  </div>
-
+      
   <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var sections = document.querySelectorAll("section");
+
+
+    var observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.5 });
+
+
+    sections.forEach(function(section) {
+      observer.observe(section);
+    });
+  });
+
     // JavaScript to toggle visibility based on screen width
     document.addEventListener("DOMContentLoaded", function() {
       var desktopDirectory = document.getElementById("desktopDirectory");
@@ -73,7 +316,162 @@
         }
       });
     });
-  </script>
+</script>
 
+
+
+
+
+
+
+
+
+
+<div id="desktopDirectory">
+
+
+
+
+            <div id="div2">
+  <table width="100%" bgcolor="white" bordercolor=""  id = "MainTable">
+    <tr>
+     
+      <td>
+       <table width="70%" cellpadding="1" bgcolor="white">
+    <tr>
+      <td width="10%>
+<br>
+ <a href="index.html"><center>
+   <img src="logo2.png" width="35%" opacity="80%">
+   
+        <p><b>老蒋地毯</b></p></center>
+ </a>
+</td>
+</tr>
+</table ></td>
+         <td bgcolor=""  width="12%">
+           
+            <center>
+             
+              <h2><a href="index.html">
+          </a></h2><p></p>
+            </center>
+          </td>
+         
+       
+          <td  width="12%">
+            <center><h2><a href="index.html">HOME</a></h2>
+            <p>主页</p></center>
+           
+          </td>
+          <td width="12%">
+            <center><h2><a href="price.html">PRICE</a></h2>
+            <p>价格</p></center>
+           
+          </td>
+         
+          <td width="12%">
+            <center><h2><a href="tec.html">technology</h2>
+            <p>技术</p></a></center>
+           
+          </td>
+          <td width="12%">
+            <center><h2><a href="cnhome.html">中文</h2>
+            <p>文/E</p></a></center>
+          </td>
+</tr>
+    </table>
+               </div>
+
+  
+<br>
+<section>
+  <img src="im.png" width="90%">
+  </section>
+
+  <section>
+  </section>
+
+  <section>
+    <h1>Section 3</h1>
+    <p>This is the third section.</p>
+  </section>
+    <footer>
+<h4>                    预约电话：1234123123123</h4>
+        <h5>                    版权所有 &copy; 2023 I Carpet Cleaning  老蒋地毯</h5>
+    </footer>
+
+</div>
+
+
+
+
+
+
+ <!-- Mobile Directory Structure -->
+ <div id="mobileDirectory">
+  <nav>
+<table>
+  <tr>
+    <td>
+
+    <div class="dropdown">
+      <button class="dropbtn"><img src="more.png" width="50%"></button>
+      <div class="dropdown-content">
+        <a href="#service1"><h3>Price</h3></a>
+        <a href="#service2"><h3>Abought us</h3></a>
+        <a href="#service3"><h3>Service</h3></a>
+        <a href="#service3"><h3>中文</h3></a>
+      </div>
+    </div>
+  
+  </td>
+<td  width="70%" >
+  <center>
+    <a href="index.html"> 
+
+     
+   
+
+     <img src="logo3.png" width="30%">
+     
+
+          
+
+        
+
+        </a>
+  </center>
+
+  </td>
+  <td>
+    <a href="cnhome.html">
+<h3>中文</h3>
+</a>
+  </td>
+</tr>
+</table>
+<div class="jumbotron">
+  <div class="row">
+
+      <div>
+         
+          <div id="div1">
+         
+              
+                      <a href=”tel:6692530123″>
+                        <img src="calllogo.png">
+                      </a>
+     
+   </div>
+ </div></div></div>
+
+
+ <footer>
+
+          <h5>                    版权所有 &copy; 2023 I Carpet Cleaning  老蒋地毯</h5>
+      </footer>
+  </nav>
+</div>
 </body>
 </html>
