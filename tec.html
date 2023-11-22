@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
  
@@ -33,11 +34,24 @@
 footer {
             background-color: white;
             color: #fff;
-            text-align: center;
-            padding: 10px;
+            text-align: Center;
+            padding: 0;
             position: fixed;
             width: 100%;
             bottom: 0;
+            opacity: 70%;
+            height: 5%;
+            line-height: 7px;
+}
+
+#MainTable {
+
+  opacity: 90%;
+  line-height: 12px;
+  height: 15%;
+  position: fixed;
+  width: 100%;
+  z-index: 2；
 }
             
 a:link {
@@ -78,7 +92,16 @@ h5{
 h4{
   font-size:20px;
   color:black;
-  right: 20%;
+
+}
+
+h6{
+  font-size:300%;
+  color:rgb(255, 255, 255);
+  position: center;
+  bottom: 30px;
+  float: center;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 
@@ -96,26 +119,25 @@ h2 {
   position: fixed;
   background: none;
   color: white;
-    top: 0%;
-  right: 0%;
+  top: 0%;
+
 }
 
- 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      /*height: 150vh; /* Increase body height for scrolling effect */
-    }
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
 
     section {
-      height: 100vh;
+    height: 500Px;
       display: flex;
       justify-content: center;
       align-items: center;
       opacity: 0;
-      transition: opacity 1s ease-in-out;
+      transition: opacity 5s ease-in-out;
+width: 100%;
     }
 
 
@@ -156,7 +178,7 @@ h2 {
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #f9f9f9;
+      background-color: #ffffff;
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
@@ -182,6 +204,9 @@ h2 {
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
+    /* Container holding the image and the text */
+
 
     /* Responsive styles */
     @media screen and (max-width: 600px) {
@@ -222,7 +247,7 @@ h2 {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -239,7 +264,7 @@ h2 {
 
 .dropdown-content a:hover {
   background-color: none;
-}
+} 
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -248,12 +273,25 @@ h2 {
     #div1 {
   position: fixed;
   background: none;
-  color: white;
-    top: 80%;
-  right: 10%;
+
+    top: 78%;
+  right: -55%;
+}
+#div3 {
+  position: fixed;
+  background: none;
+    top: 78%;
+  right: -32%;
+}
+
+
+#pfooter{
+  height: 5%;
 }
   </style>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -266,7 +304,6 @@ href="/site.webmanifest">
 
  <title>I Carpet Cleaning</title>
  
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     </head>
@@ -275,23 +312,22 @@ href="/site.webmanifest">
 
       
   <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var sections = document.querySelectorAll("section");
+document.addEventListener("DOMContentLoaded", function() {
+  var sections = document.querySelectorAll("section");
 
-
-    var observer = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, { threshold: 0.5 });
-
-
-    sections.forEach(function(section) {
-      observer.observe(section);
+  var observer = new IntersectionObserver(function(entries, observerInstance) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
     });
+  }, { threshold: 0.7 });
+
+  sections.forEach(function(section) {
+    observer.observe(section);
   });
+});
+
 
     // JavaScript to toggle visibility based on screen width
     document.addEventListener("DOMContentLoaded", function() {
@@ -316,33 +352,21 @@ href="/site.webmanifest">
         }
       });
     });
+    
 </script>
 
-
-
-
-
-
-
-
-
-
 <div id="desktopDirectory">
-
-
-
-
             <div id="div2">
-  <table width="100%" bgcolor="white" bordercolor=""  id = "MainTable">
+  <table width="101%" bgcolor="white"  id = "MainTable"   >
     <tr>
      
       <td>
-       <table width="70%" cellpadding="1" bgcolor="white">
+       <table width="70%"  bgcolor="white">
     <tr>
       <td width="10%>
 <br>
  <a href="index.html"><center>
-   <img src="logo2.png" width="35%" opacity="80%">
+   <img src="logo2.png" width="35%" opacity="100%">
    
         <p><b>老蒋地毯</b></p></center>
  </a>
@@ -382,26 +406,41 @@ href="/site.webmanifest">
 </tr>
     </table>
                </div>
-
-  
-<br>
+               <div class="jumbotron">
+                <div class="row">
+                    <div>
+                        <div id="div3">
+                                    <a href="call.html">
+                                      <img src="calllogo.png" width="25%">
+                                    </a>
+                 </div>
+               </div></div></div>
 <section>
-  <img src="im.png" width="90%">
+  
+  <img src="im.jpg" width="100%">
+
+  </div>
   </section>
 
   <section>
+    </div>
   </section>
 
   <section>
-    <h1>Section 3</h1>
-    <p>This is the third section.</p>
+
   </section>
+  
     <footer>
-<h4>                    预约电话：1234123123123</h4>
-        <h5>                    版权所有 &copy; 2023 I Carpet Cleaning  老蒋地毯</h5>
+ 
+        <p>                    版权所有 &copy; 2023 I Carpet Cleaning  老蒋地毯</p>
+     
     </footer>
-
+    
 </div>
+
+
+
+
 
 
 
@@ -411,10 +450,10 @@ href="/site.webmanifest">
  <!-- Mobile Directory Structure -->
  <div id="mobileDirectory">
   <nav>
-<table>
+    <div id="div2">
+<table bgcolor="white">
   <tr>
     <td>
-
     <div class="dropdown">
       <button class="dropbtn"><img src="more.png" width="50%"></button>
       <div class="dropdown-content">
@@ -424,53 +463,33 @@ href="/site.webmanifest">
         <a href="#service3"><h3>中文</h3></a>
       </div>
     </div>
-  
   </td>
-<td  width="70%" >
+  
+<td  width="60%" >
   <center>
     <a href="index.html"> 
-
-     
-   
-
-     <img src="logo3.png" width="30%">
-     
-
-          
-
-        
-
+     <img src="logo3.png" width="40%">
         </a>
-  </center>
-
+      </center>
   </td>
-  <td>
+  <td width="20%">
     <a href="cnhome.html">
 <h3>中文</h3>
 </a>
   </td>
 </tr>
 </table>
+</div>
 <div class="jumbotron">
   <div class="row">
-
       <div>
-         
           <div id="div1">
-         
-              
-                      <a href=”tel:6692530123″>
-                        <img src="calllogo.png" width="5%">
+                      <a onclick="window.open('tel:6692530123');">
+                        <img src="calllogo.png" width="25%">
                       </a>
-     
    </div>
  </div></div></div>
 
-
- <footer>
-
-          <h5>                    版权所有 &copy; 2023 I Carpet Cleaning  老蒋地毯</h5>
-      </footer>
   </nav>
 </div>
 </body>
