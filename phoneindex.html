@@ -20,7 +20,8 @@
             align-items: center;
         }
         header img {
-            height: 30px;
+            height: auto; /* Maintain aspect ratio */
+            width: 150px; /* Increase the width to make the logo larger */
         }
         nav {
             position: relative;
@@ -61,8 +62,8 @@
     </style>
 </head>
 <body>
-    <header hight="20%">
-        <img src="logo3.png"  width="20%">
+    <header>
+        <img src="logo3.png" alt="Logo">
         <nav>
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
             <ul id="menu">
