@@ -3,209 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Steam Deep Carpet Cleaning</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
-            background: #f8f9fa;
-            color: #333;
+            background-color: #f4f4f4;
+            color: #000; /* Set all text to black */
         }
-
         header {
             background-color: #ffffff;
-            color: #333;
-            padding: 20px;
-            transition: background-color 0.5s ease, box-shadow 0.5s ease;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         header img {
-            max-width: 150px;
+            height: 30px;
         }
-
-        .nav-container {
-            display: flex;
-            align-items: center;
-        }
-
         nav {
             position: relative;
         }
-
+        nav .menu-icon {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 24px;
+            color: #000; /* Set menu icon to black */
+        }
         nav ul {
+            display: none;
             list-style-type: none;
             padding: 0;
             margin: 0;
-            background-color: #ffffff;
-            display: flex;
-            align-items: center;
-        }
-
-        nav ul li {
-            display: inline;
-            position: relative;
-        }
-
-        nav ul li a {
-            color: #333;
-            padding: 14px 20px;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: 700;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #007bff;
-        }
-
-        nav ul ul {
-            display: none;
             position: absolute;
-            top: 100%;
-            left: 0;
-            flex-direction: column;
-            min-width: 150px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            top: 40px;
+            right: 10px;
+            background-color: #ffffff;
+            width: 150px;
         }
-
-        nav ul ul li {
+        nav ul li {
+            border-bottom: 1px solid #ddd; /* Set border color to gray for better visibility */
+        }
+        nav ul li a {
+            color: #000; /* Set link text to black */
+            text-decoration: none;
+            padding: 10px;
             display: block;
         }
-
-        nav ul ul li a {
-            padding: 10px;
+        nav ul li a:hover {
+            background-color: #f4f4f4; /* Set hover background color to light gray */
         }
-
-        nav ul li:hover > ul {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .dropdown img {
-            cursor: pointer;
-        }
-
-        main {
-            padding: 120px 20px 20px; /* Padding adjusted for fixed header */
+        .content {
+            padding: 20px;
             text-align: center;
-        }
-
-        section {
-            margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            background: white;
-            padding: 40px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        footer {
-            background-color: #f8f9fa;
-            color: #333;
-            text-align: center;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .nav-container {
-                width: 100%;
-                justify-content: space-between;
-            }
-
-            nav ul {
-                width: 100%;
-                text-align: left;
-            }
-
-            nav ul li {
-                display: block;
-            }
-
-            nav ul ul {
-                position: static;
-            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <table width="100%">
-            <tr>
-                <td>
-                    <img src="logo3.png" alt="Logo">
-                    </td>
-                    <td>
-                    <div class="nav-container">
-                        <nav>
-                            <ul>
-                                <li class="dropdown">
-                                    <img src="more.png" alt="More" width="30px">
-                                    <ul>
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="technology.html">Technology</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                </td>
-            </tr>
-        </table>
-       
-        </div>
+    <header hight="20%">
+        <img src="logo3.png"  width="20%">
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section id="main-content">
-            <h2>Main Content</h2>
-            <p>This is the main content of the homepage. It's designed to be mobile-friendly and responsive.</p>
-        </section>
-    </main>
-    <footer>
-        &copy; 2024 My Professional Website. All rights reserved.
-    </footer>
-    <script>
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.backgroundColor = '#f8f9fa';
-                header.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.backgroundColor = '#ffffff';
-                header.style.boxShadow = 'none';
-            }
+    <div class="content">
+        <h1>Welcome to Steam Deep Carpet Cleaning</h1>
+        <p>Your solution for the deepest and most thorough carpet cleaning.</p>
+    </div>
 
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 50) {
-                    section.style.opacity = 1;
-                    section.style.transform = 'translateY(0)';
-                }
-            });
-        });
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
     </script>
 </body>
 </html>
