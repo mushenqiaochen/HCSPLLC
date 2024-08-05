@@ -10,27 +10,24 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: #000; /* Set all text to black */
+            color: #333;
         }
         header {
             background-color: #ffffff;
-            padding: 10px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         header img {
-            height: auto; /* Maintain aspect ratio */
-            width: 150px; /* Increase the width to make the logo larger */
-        }
-        nav {
-            position: relative;
+            width: 150px;
         }
         nav .menu-icon {
             display: inline-block;
             cursor: pointer;
             font-size: 24px;
-            color: #000; /* Set menu icon to black */
+            color: #333;
         }
         nav ul {
             display: none;
@@ -38,32 +35,47 @@
             padding: 0;
             margin: 0;
             position: absolute;
-            top: 40px;
+            top: 60px;
             right: 10px;
             background-color: #ffffff;
-            width: 150px;
+            width: 200px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav ul li {
-            border-bottom: 1px solid #ddd; /* Set border color to gray for better visibility */
+            border-bottom: 1px solid #ddd;
         }
         nav ul li a {
-            color: #000; /* Set link text to black */
+            color: #333;
             text-decoration: none;
-            padding: 10px;
+            padding: 10px 20px;
             display: block;
         }
         nav ul li a:hover {
-            background-color: #f4f4f4; /* Set hover background color to light gray */
+            background-color: #e9e9e9;
         }
         .content {
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+        }
+        .services, .about, .contact {
+            padding: 40px 20px;
+        }
+        .services img, .about img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo3.png" alt="Logo">
+        <img src="logo3.png" alt="Steam Deep Carpet Cleaning Logo">
         <nav>
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
             <ul id="menu">
@@ -74,10 +86,42 @@
             </ul>
         </nav>
     </header>
-    <div class="content">
+
+    <div class="content" id="home">
         <h1>Welcome to Steam Deep Carpet Cleaning</h1>
         <p>Your solution for the deepest and most thorough carpet cleaning.</p>
     </div>
+
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <p>We offer a range of professional cleaning services to meet your needs:</p>
+        <ul>
+            <li>Residential Carpet Cleaning</li>
+            <li>Commercial Carpet Cleaning</li>
+            <li>Upholstery Cleaning</li>
+            <li>Stain and Odor Removal</li>
+            <li>Pet Odor and Stain Removal</li>
+        </ul>
+        <img src="services.jpg" alt="Professional Carpet Cleaning">
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>Steam Deep Carpet Cleaning is dedicated to providing top-quality carpet and upholstery cleaning services. With years of experience, our team uses state-of-the-art equipment and eco-friendly products to ensure your home or business is clean and healthy.</p>
+        <img src="about-us.jpg" alt="Our Team">
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need to schedule a cleaning? Get in touch with us!</p>
+        <p><strong>Phone:</strong> (123) 456-7890</p>
+        <p><strong>Email:</strong> info@steamdeepcleaning.com</p>
+        <p><strong>Address:</strong> 123 Clean Street, City, State, ZIP</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Steam Deep Carpet Cleaning. All rights reserved.</p>
+    </footer>
 
     <script>
         function toggleMenu() {
