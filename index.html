@@ -181,7 +181,14 @@
 </head>
 
 <body>
-    <header>
+  
+
+    </section>
+
+    <div id="desktopDirectory" style="display: none;">
+        <!-- Desktop directory content here -->
+
+        <header>
         <img src="logo3.png" alt="Hydro Cleaning Services Pro Logo">
         <nav>
             <ul>
@@ -250,12 +257,26 @@
     <section class="about" id="about">
         <h2>About Us</h2>
         <p>Hydro Cleaning Services Pro is dedicated to providing top-quality carpet and upholstery cleaning services. With years of experience, we ensure a healthy, fresh space for your home or business.</p>
-    </section>
 
-    <footer>
-        <p>&copy; 2023 Hydro Cleaning Services Pro. All rights reserved.</p>
-        <p>Contact us at <a href="mailto:QIAO@hcspLLC.com" style="color: #fff;">QIAO@hcspLLC.com</a></p>
-    </footer>
+
+
+        <footer>
+            <p>&copy; 2025 Hydro Cleaning Services Pro. </p>
+            <p>Contact us at <a href="mailto:QIAO@hcspLLC.com" style="color: #fff;">QIAO@hcspLLC.com</a></p>
+        </footer>
+
+    </div>
+    <div id="mobileDirectory" style="display: none;">
+        <!-- Mobile directory content here -->
+
+
+
+
+
+        
+    </div>
+
+  
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -280,6 +301,38 @@
             sections.forEach(section => {
                 observer.observe(section);
             });
+
+            var desktopDirectory = document.getElementById("desktopDirectory");
+            var mobileDirectory = document.getElementById("mobileDirectory");
+
+            // Check the initial screen width
+            if (window.innerWidth >= 768) {
+                desktopDirectory.style.display = "block";
+            } else {
+                mobileDirectory.style.display = "block";
+            }
+
+            // Update visibility on window resize
+            window.addEventListener("resize", function() {
+                if (window.innerWidth >= 768) {
+                    desktopDirectory.style.display = "block";
+                    mobileDirectory.style.display = "none";
+                } else {
+                    desktopDirectory.style.display = "none";
+                    mobileDirectory.style.display = "block";
+                }
+            });
+        });
+
+        const phoneNumber = document.getElementById('phoneNumber');
+        const content = document.getElementById('content');
+
+        phoneNumber.addEventListener('mouseover', () => {
+            content.style.transform = 'scale(1.1)';
+        });
+
+        phoneNumber.addEventListener('mouseout', () => {
+            content.style.transform = 'scale(1)';
         });
     </script>
 </body>
