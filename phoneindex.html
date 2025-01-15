@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steam Deep Carpet Cleaning</title>
+    <title>Hydro Cleaning Services Pro</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,6 +19,11 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
         header img {
             width: 150px;
@@ -26,27 +31,28 @@
         nav .menu-icon {
             display: inline-block;
             cursor: pointer;
-            font-size: 24px;
-            color: #333;
+            width: 30px; /* Adjusted width for smaller size */
+            height: 30px; /* Adjusted height for smaller size */
         }
         nav ul {
             display: none;
             list-style-type: none;
             padding: 0;
             margin: 0;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
             position: absolute;
             top: 60px;
-            right: 10px;
-            background-color: #ffffff;
-            width: 200px;
+            width: 100%;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav ul li {
-            border-bottom: 1px solid #ddd;
+            margin: 10px 0;
         }
         nav ul li a {
-            color: #333;
             text-decoration: none;
+            color: #333;
             padding: 10px 20px;
             display: block;
         }
@@ -56,13 +62,65 @@
         .content {
             padding: 40px 20px;
             text-align: center;
+            background: url('section1BG.png') no-repeat center center/cover;
+            color: #fff;
+            margin-top: 80px; /* Adjusted to account for the fixed header */
         }
         .services, .about, .contact {
             padding: 40px 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        .services img, .about img {
-            max-width: 100%;
-            height: auto;
+        .services.visible, .about.visible, .contact.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .services, .about {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .service-item {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+        .service-item img {
+            width: 50px;
+            height: 50px;
+        }
+        .service-item h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .service-item p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .call-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .call-button:hover {
+            background-color: #0056b3;
         }
         footer {
             background-color: #333;
@@ -71,52 +129,134 @@
             padding: 20px 0;
             margin-top: 40px;
         }
+        @media (max-width: 768px) {
+            header img {
+                width: 150px; /* Adjusted width for smaller screens */
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            .service-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .service-item {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo3.png" alt="Steam Deep Carpet Cleaning Logo">
+        <img src="logo3.png" alt="Hydro Cleaning Services Pro Logo">
         <nav>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <ul id="menu">
+            <img src="more.png" alt="Menu" class="menu-icon" onclick="toggleMenu()">
+            <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#chinese">Chinese</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="content" id="home">
-        <h1>Welcome to Steam Deep Carpet Cleaning</h1>
+        <h1 style="margin-left: 10px;">Welcome to Hydro Cleaning Services Pro</h1>
         <p>Your solution for the deepest and most thorough carpet cleaning.</p>
+        <a href="call.html" class="call-button">Call Us Now</a>
     </div>
 
     <section class="services" id="services">
         <h2>Our Services</h2>
         <p>We offer a range of professional cleaning services to meet your needs:</p>
-        <ul>
-            <li>Carpet Cleaning</li>
-            <li>Tile Cleaning</li>
-            <li>Sofa Cleaning</li>
-            <li>patching Carpet holes</li>
-        </ul>
-      
+        <div class="service-list">
+            <div class="service-item">
+                <img src="icons/carpet-cleaning.png" alt="Carpet Cleaning Icon">
+                <h3>Carpet Cleaning</h3>
+                <p>Deep and thorough carpet cleaning to remove dirt and stains.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/tile-cleaning.png" alt="Tile Cleaning Icon">
+                <h3>Tile Cleaning</h3>
+                <p>Professional tile cleaning to restore the shine of your tiles.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/sofa-cleaning.png" alt="Sofa Cleaning Icon">
+                <h3>Sofa Cleaning</h3>
+                <p>Expert sofa cleaning to keep your furniture looking new.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/patching-carpet.png" alt="Patching Carpet Holes Icon">
+                <h3>Patching Carpet Holes</h3>
+                <p>Repairing carpet holes to extend the life of your carpets.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/exhaust-hood.png" alt="Exhaust Hood Cleaning Icon">
+                <h3>Exhaust Hood Cleaning</h3>
+                <p>Thorough cleaning of exhaust hoods to maintain kitchen hygiene.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/roof-gutter.png" alt="Roof and Gutter Cleaning Icon">
+                <h3>Roof and Gutter Cleaning</h3>
+                <p>Cleaning roofs and gutters to prevent water damage.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/air-duct.png" alt="Air Duct Cleaning Icon">
+                <h3>Air Duct Cleaning</h3>
+                <p>Cleaning air ducts to improve indoor air quality.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/high-pressure.png" alt="High-Pressure Washing Icon">
+                <h3>Sidewalk and Garage High-Pressure Water Washing</h3>
+                <p>High-pressure washing to clean sidewalks and garages.</p>
+            </div>
+        </div>
     </section>
 
     <section class="about" id="about">
         <h2>About Us</h2>
-        <p>Steam Deep Carpet Cleaning is dedicated to providing top-quality carpet and upholstery cleaning services. With years of experience.</p>
-
+        <p>Hydro Cleaning Services Pro is dedicated to providing top-quality carpet and upholstery cleaning services. With years of experience, we ensure a healthy, fresh space for your home or business.</p>
     </section>
 
-
+    <footer>
+        <p>&copy; 2023 Hydro Cleaning Services Pro. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:QIAO@hcspLLC.com" style="color: #fff;">QIAO@hcspLLC.com</a></p>
+    </footer>
 
     <script>
         function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            const navUl = document.querySelector('nav ul');
+            navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("nav ul li a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+                    document.querySelector('nav ul').style.display = 'none'; // Hide menu after click
+                });
+            });
+
+            const sections = document.querySelectorAll('.services, .about, .contact');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
     </script>
 </body>
 </html>
