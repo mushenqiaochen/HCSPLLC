@@ -53,6 +53,10 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
+        nav ul.show {
+            display: flex;
+        }
+
         nav ul li {
             margin: 10px 0;
         }
@@ -71,7 +75,7 @@
         .content {
             padding: 40px 20px;
             text-align: center;
-            background: url('section1BG - 副本.png') no-repeat center center/cover;
+            background: url('section1BG.png') no-repeat center center/cover;
             color: #fff;
             margin-top: 80px; /* Adjusted to account for the fixed header */
         }
@@ -257,7 +261,7 @@
     <script>
         function toggleMenu() {
             const navUl = document.querySelector('nav ul');
-            navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
+            navUl.classList.toggle('show');
         }
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -267,7 +271,7 @@
                     event.preventDefault();
                     const targetId = this.getAttribute("href").substring(1);
                     document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
-                    document.querySelector('nav ul').style.display = 'none'; // Hide menu after click
+                    document.querySelector('nav ul').classList.remove('show'); // Hide menu after click
                 });
             });
 
