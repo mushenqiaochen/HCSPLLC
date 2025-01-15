@@ -40,37 +40,18 @@
         }
 
         header img {
-            width: 150px;
-        }
-
-        nav .menu-icon {
-            display: inline-block;
-            cursor: pointer;
-            width: 30px; /* Adjusted width for smaller size */
-            height: 30px; /* Adjusted height for smaller size */
+            width: 200px; /* Increased the width */
         }
 
         nav ul {
-            display: none;
             list-style-type: none;
             padding: 0;
             margin: 0;
-            flex-direction: column;
-            align-items: center;
-            background-color: #ffffff;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            width: 100%;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul.show {
             display: flex;
         }
 
         nav ul li {
-            margin: 10px 0;
+            margin: 0 10px;
         }
 
         nav ul li a {
@@ -112,16 +93,18 @@
         }
 
         .service-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
 
         .service-item {
             background-color: #fff;
+            margin: 10px;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 200px;
             transition: transform 0.3s ease;
         }
 
@@ -168,10 +151,6 @@
         }
 
         @media (max-width: 768px) {
-            header img {
-                width: 150px; /* Adjusted width for smaller screens */
-            }
-
             nav ul {
                 flex-direction: column;
                 align-items: center;
@@ -182,206 +161,103 @@
             }
 
             .service-list {
-                grid-template-columns: repeat(2, 1fr);
+                flex-direction: column;
+                align-items: center;
             }
 
             .service-item {
-                width: 100%;
+                width: 90%;
             }
+        }
+
+        #div3 {
+            position: fixed;
+            background: none;
+            top: 78%;
+            right: -33%;
+            z-index: 2000; /* Set a high z-index value */
         }
     </style>
 </head>
 
 <body>
-    <div id="desktopDirectory" style="display: none;">
-        <!-- Desktop content goes here -->
-        <header>
-            <img src="logo3.png" alt="Hydro Cleaning Services Pro Logo">
-            <nav>
-                <img src="more.png" alt="Menu" class="menu-icon" onclick="toggleMenu()">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#chinese">Chinese</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <img src="logo3.png" alt="Hydro Cleaning Services Pro Logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#chinese">Chinese</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="content" id="home">
-            <h1 style="margin-left: 10px;">Welcome to Hydro Cleaning Services Pro</h1>
-            <p>Your solution for the deepest and most thorough carpet cleaning.</p>
-            <a href="call.html" class="call-button">Call Us Now</a>
-        </div>
-
-        <section class="services" id="services">
-            <h2>Our Services</h2>
-            <p>We offer a range of professional cleaning services to meet your needs:</p>
-            <div class="service-list">
-                <div class="service-item">
-                    <img src="icons/carpet-cleaning.png" alt="Carpet Cleaning Icon">
-                    <h3>Carpet Cleaning</h3>
-                    <p>Deep and thorough carpet cleaning to remove dirt and stains.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/tile-cleaning.png" alt="Tile Cleaning Icon">
-                    <h3>Tile Cleaning</h3>
-                    <p>Professional tile cleaning to restore the shine of your tiles.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/sofa-cleaning.png" alt="Sofa Cleaning Icon">
-                    <h3>Sofa Cleaning</h3>
-                    <p>Expert sofa cleaning to keep your furniture looking new.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/patching-carpet.png" alt="Patching Carpet Holes Icon">
-                    <h3>Patching Carpet Holes</h3>
-                    <p>Repairing carpet holes to extend the life of your carpets.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/exhaust-hood.png" alt="Exhaust Hood Cleaning Icon">
-                    <h3>Exhaust Hood Cleaning</h3>
-                    <p>Thorough cleaning of exhaust hoods to maintain kitchen hygiene.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/roof-gutter.png" alt="Roof and Gutter Cleaning Icon">
-                    <h3>Roof and Gutter Cleaning</h3>
-                    <p>Cleaning roofs and gutters to prevent water damage.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/air-duct.png" alt="Air Duct Cleaning Icon">
-                    <h3>Air Duct Cleaning</h3>
-                    <p>Cleaning air ducts to improve indoor air quality.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/high-pressure.png" alt="High-Pressure Washing Icon">
-                    <h3>Sidewalk and Garage High-Pressure Water Washing</h3>
-                    <p>High-pressure washing to clean sidewalks and garages.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="about" id="about">
-            <h2>About Us</h2>
-            <p>Hydro Cleaning Services Pro is dedicated to providing top-quality carpet and upholstery cleaning services. With years of experience, we ensure a healthy, fresh space for your home or business.</p>
-        </section>
-
-        <footer>
-            <p>&copy; 2023 Hydro Cleaning Services Pro. All rights reserved.</p>
-            <p>Contact us at <a href="mailto:QIAO@hcspLLC.com" style="color: #fff;">QIAO@hcspLLC.com</a></p>
-        </footer>
+    <div class="content" id="home">
+        <h1 style="margin-left: 10px;">Welcome to Hydro Cleaning Services Pro</h1>
+        <p>Your solution for the deepest and most thorough carpet cleaning.</p>
+        <a href="call.html" class="call-button">Call Us Now</a>
     </div>
 
-    <div id="mobileDirectory" style="display: none;">
-        <!-- Mobile content goes here -->
-        <header>
-            <img src="logo3.png" alt="Hydro Cleaning Services Pro Logo">
-            <nav>
-                <img src="more.png" alt="Menu" class="menu-icon" onclick="toggleMenu()">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#chinese">Chinese</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="content" id="home">
-            <h1 style="margin-left: 10px;">Welcome to Hydro Cleaning Services Pro</h1>
-            <p>Your solution for the deepest and most thorough carpet cleaning.</p>
-            <a href="call.html" class="call-button">Call Us Now</a>
-        </div>
-
-        <section class="services" id="services">
-            <h2>Our Services</h2>
-            <p>We offer a range of professional cleaning services to meet your needs:</p>
-            <div class="service-list">
-                <div class="service-item">
-                    <img src="icons/carpet-cleaning.png" alt="Carpet Cleaning Icon">
-                    <h3>Carpet Cleaning</h3>
-                    <p>Deep and thorough carpet cleaning to remove dirt and stains.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/tile-cleaning.png" alt="Tile Cleaning Icon">
-                    <h3>Tile Cleaning</h3>
-                    <p>Professional tile cleaning to restore the shine of your tiles.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/sofa-cleaning.png" alt="Sofa Cleaning Icon">
-                    <h3>Sofa Cleaning</h3>
-                    <p>Expert sofa cleaning to keep your furniture looking new.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/patching-carpet.png" alt="Patching Carpet Holes Icon">
-                    <h3>Patching Carpet Holes</h3>
-                    <p>Repairing carpet holes to extend the life of your carpets.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/exhaust-hood.png" alt="Exhaust Hood Cleaning Icon">
-                    <h3>Exhaust Hood Cleaning</h3>
-                    <p>Thorough cleaning of exhaust hoods to maintain kitchen hygiene.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/roof-gutter.png" alt="Roof and Gutter Cleaning Icon">
-                    <h3>Roof and Gutter Cleaning</h3>
-                    <p>Cleaning roofs and gutters to prevent water damage.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/air-duct.png" alt="Air Duct Cleaning Icon">
-                    <h3>Air Duct Cleaning</h3>
-                    <p>Cleaning air ducts to improve indoor air quality.</p>
-                </div>
-                <div class="service-item">
-                    <img src="icons/high-pressure.png" alt="High-Pressure Washing Icon">
-                    <h3>Sidewalk and Garage High-Pressure Water Washing</h3>
-                    <p>High-pressure washing to clean sidewalks and garages.</p>
-                </div>
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <p>We offer a range of professional cleaning services to meet your needs:</p>
+        <div class="service-list">
+            <div class="service-item">
+                <img src="icons/carpet-cleaning.png" alt="Carpet Cleaning Icon">
+                <h3>Carpet Cleaning</h3>
+                <p>Deep and thorough carpet cleaning to remove dirt and stains.</p>
             </div>
-        </section>
+            <div class="service-item">
+                <img src="icons/tile-cleaning.png" alt="Tile Cleaning Icon">
+                <h3>Tile Cleaning</h3>
+                <p>Professional tile cleaning to restore the shine of your tiles.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/sofa-cleaning.png" alt="Sofa Cleaning Icon">
+                <h3>Sofa Cleaning</h3>
+                <p>Expert sofa cleaning to keep your furniture looking new.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/patching-carpet.png" alt="Patching Carpet Holes Icon">
+                <h3>Patching Carpet Holes</h3>
+                <p>Repairing carpet holes to extend the life of your carpets.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/exhaust-hood.png" alt="Exhaust Hood Cleaning Icon">
+                <h3>Exhaust Hood Cleaning</h3>
+                <p>Thorough cleaning of exhaust hoods to maintain kitchen hygiene.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/roof-gutter.png" alt="Roof and Gutter Cleaning Icon">
+                <h3>Roof and Gutter Cleaning</h3>
+                <p>Cleaning roofs and gutters to prevent water damage.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/air-duct.png" alt="Air Duct Cleaning Icon">
+                <h3>Air Duct Cleaning</h3>
+                <p>Cleaning air ducts to improve indoor air quality.</p>
+            </div>
+            <div class="service-item">
+                <img src="icons/high-pressure.png" alt="High-Pressure Washing Icon">
+                <h3>Sidewalk and Garage High-Pressure Water Washing</h3>
+                <p>High-pressure washing to clean sidewalks and garages.</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="about" id="about">
-            <h2>About Us</h2>
-            <p>Hydro Cleaning Services Pro is dedicated to providing top-quality carpet and upholstery cleaning services. With years of experience, we ensure a healthy, fresh space for your home or business.</p>
-        </section>
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>Hydro Cleaning Services Pro is dedicated to providing top-quality carpet and upholstery cleaning services. With years of experience, we ensure a healthy, fresh space for your home or business.</p>
+    </section>
 
-        <footer>
-            <p>&copy; 2023 Hydro Cleaning Services Pro. All rights reserved.</p>
-            <p>Contact us at <a href="mailto:QIAO@hcspLLC.com" style="color: #fff;">QIAO@hcspLLC.com</a></p>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2023 Hydro Cleaning Services Pro. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:QIAO@hcspLLC.com" style="color: #fff;">QIAO@hcspLLC.com</a></p>
+    </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var desktopDirectory = document.getElementById("desktopDirectory");
-            var mobileDirectory = document.getElementById("mobileDirectory");
-
-            // Check the initial screen width
-            if (window.innerWidth >= 768) {
-                desktopDirectory.style.display = "block";
-            } else {
-                mobileDirectory.style.display = "block";
-            }
-
-            // Update visibility on window resize
-            window.addEventListener("resize", function() {
-                if (window.innerWidth >= 768) {
-                    desktopDirectory.style.display = "block";
-                    mobileDirectory.style.display = "none";
-                } else {
-                    desktopDirectory.style.display = "none";
-                    mobileDirectory.style.display = "block";
-                }
-            });
-        });
-
-        function toggleMenu() {
-            const navUl = document.querySelector('nav ul');
-            navUl.classList.toggle('show');
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
             const navLinks = document.querySelectorAll("nav ul li a");
             navLinks.forEach(link => {
@@ -389,7 +265,6 @@
                     event.preventDefault();
                     const targetId = this.getAttribute("href").substring(1);
                     document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
-                    document.querySelector('nav ul').classList.remove('show'); // Hide menu after click
                 });
             });
 
