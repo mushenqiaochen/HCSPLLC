@@ -177,6 +177,22 @@
             right: -33%; 
             z-index: 2000; /* Set a high z-index value */
         }
+
+        .back-button {
+            display: block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
@@ -328,6 +344,19 @@
 
         phoneNumber.addEventListener('mouseout', () => {
             content.style.transform = 'scale(1)';
+        });
+
+        document.getElementById('moreIcon').addEventListener('click', function() {
+            var dropdownMenu = document.getElementById('dropdownMenu');
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        });
+
+        document.getElementById('backButton').addEventListener('click', function() {
+            document.getElementById('dropdownMenu').style.display = 'none';
         });
     </script>
 </body>
