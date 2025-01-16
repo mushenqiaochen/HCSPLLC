@@ -209,6 +209,21 @@
         .dropdown-menu ul li {
             margin: 10px 0;
         }
+        .back-button {
+            display: block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
@@ -219,6 +234,7 @@
     </header>
 
     <div class="dropdown-menu" id="dropdownMenu">
+        <span class="back-button" id="backButton">Back</span>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
@@ -329,6 +345,10 @@
             } else {
                 dropdownMenu.style.display = 'block';
             }
+        });
+
+        document.getElementById('backButton').addEventListener('click', function() {
+            document.getElementById('dropdownMenu').style.display = 'none';
         });
     </script>
 </body>
