@@ -275,11 +275,11 @@ nav ul li a.active {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  height: 60vh;
+  min-height: 500px;
   display: flex;
   align-items: center;
-  background: url('section1BG.png') no-repeat center center/cover;
+  background: url('section1BG.png') no-repeat center center/cover width 80%;
   color: var(--white);
   text-align: left;
   margin-top: 106px; /* Account for header height */
