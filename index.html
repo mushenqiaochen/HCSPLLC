@@ -22,7 +22,7 @@
 
 <body>
     <div id="desktopDirectory">
-        <!-- Header with transparent background that becomes solid on scroll -->
+        <!-- White Header -->
         <header id="mainHeader">
             <div class="container">
                 <img src="images/logo3.png" alt="Hydro Cleaning Services Pro Logo" class="logo">
@@ -34,26 +34,37 @@
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="#chinese">中文服务</a></li>
-                        <li><a href="tel:+1234567890" class="call-now"><i class="fas fa-phone"></i> Call Now</a></li>
+                        <li><a href="tel:+6508227777" class="call-now"><i class="fas fa-phone"></i> Call Now</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <!-- Hero Section -->
+        <!-- Hero Section with new background -->
         <section class="hero" id="home">
             <div class="hero-overlay"></div>
             <div class="container">
                 <div class="hero-content">
-                    <h1>Professional Cleaning Services You Can Trust</h1>
-                    <p class="lead">Eco-friendly cleaning solutions for your home or business. Certified technicians with 10+ years of experience.</p>
+                    <h1 class="white-text">Professional Cleaning Services You Can Trust</h1>
+                    <p class="lead white-text">Eco-friendly cleaning solutions for your home or business. Certified technicians with 10+ years of experience.</p>
                     <div class="cta-buttons">
-                        <a href="tel:+1234567890" class="btn-primary"><i class="fas fa-phone"></i> Call for Free Estimate</a>
-                        <a href="#contact" class="btn-secondary"><i class="fas fa-envelope"></i> Contact Us</a>
+                        <a href="#estimate" class="btn-primary btn-large"><i class="fas fa-phone"></i> Call for Free Estimate</a>
+                        <a href="#contact" class="btn-secondary btn-large"><i class="fas fa-envelope"></i> Contact Us</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- QR Code Modal -->
+        <div id="qrModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="qrCodePlaceholder">
+                    <!-- QR code image will be placed here -->
+                </div>
+                <p>Or call us directly at: <a href="tel:+6508227777">（650）-822-7777</a></p>
+            </div>
+        </div>
 
         <!-- Trust Indicators -->
         <section class="trust-indicators">
@@ -78,7 +89,7 @@
         </section>
 
         <!-- Services Section -->
-        <section class="services" id="services">
+        <section class="services section-padding" id="services">
             <div class="container">
                 <div class="section-header">
                     <h2>Our Professional Cleaning Services</h2>
@@ -100,6 +111,7 @@
                         </ul>
                     </div>
                     
+                    <!-- Other service cards... -->
                     <div class="service-card">
                         <div class="service-icon">
                             <img src="floor.png" alt="Tile Cleaning">
@@ -179,7 +191,7 @@
         </section>
 
         <!-- About Us Section -->
-        <section class="about" id="about">
+        <section class="about section-padding" id="about">
             <div class="container">
                 <div class="about-content">
                     <div class="about-text">
@@ -219,7 +231,7 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section class="testimonials" id="testimonials">
+        <section class="testimonials section-padding" id="testimonials">
             <div class="container">
                 <div class="section-header">
                     <h2>What Our Clients Say</h2>
@@ -276,7 +288,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="contact" id="contact">
+        <section class="contact section-padding" id="contact">
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-info">
@@ -287,7 +299,7 @@
                             <i class="fas fa-phone"></i>
                             <div>
                                 <h4>Call Us</h4>
-                                <a href="tel:+1234567890">(123) 456-7890</a>
+                                <a href="tel:+6508227777">（650）-822-7777</a>
                             </div>
                         </div>
                         
@@ -350,7 +362,7 @@
         </section>
 
         <!-- Service Area Map -->
-        <section class="service-area">
+        <section class="service-area section-padding">
             <div class="container">
                 <h2>Our Service Area</h2>
                 <p>We proudly serve the following areas with our professional cleaning services:</p>
@@ -414,7 +426,7 @@
                     <div class="footer-contact">
                         <h4>Contact Info</h4>
                         <ul>
-                            <li><i class="fas fa-phone"></i> <a href="tel:+1234567890">(123) 456-7890</a></li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:+6508227777">（650）-822-7777</a></li>
                             <li><i class="fas fa-envelope"></i> <a href="mailto:QIAO@hcspLLC.com">QIAO@hcspLLC.com</a></li>
                             <li><i class="fas fa-map-marker-alt"></i> Serving the Metro Area</li>
                             <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</li>
@@ -452,6 +464,28 @@
                 });
             });
 
+            // QR Code Modal functionality
+            const modal = document.getElementById("qrModal");
+            const btn = document.querySelector('a[href="#estimate"]');
+            const span = document.getElementsByClassName("close")[0];
+            
+            if (window.innerWidth >= 768) { // Only for desktop
+                btn.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    modal.style.display = "block";
+                });
+            }
+            
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
             // Intersection Observer for scroll animations
             const sections = document.querySelectorAll('.services, .about, .testimonials, .contact');
             const observer = new IntersectionObserver(entries => {
@@ -466,15 +500,9 @@
                 observer.observe(section);
             });
 
-            // Header scroll effect
+            // Header is always white
             const header = document.getElementById('mainHeader');
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
+            header.classList.add('scrolled');
 
             // Responsive display handling
             var desktopDirectory = document.getElementById("desktopDirectory");
@@ -518,4 +546,4 @@
     </script>
 </body>
 
-</html>
+</html> 
