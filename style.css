@@ -99,9 +99,11 @@ ul {
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-dark);
+  background-color: var(--primary-color);
   transform: translateY(-3px);
   box-shadow: var(--box-shadow);
+  color: var(--white);
+
 }
 
 .btn-secondary {
