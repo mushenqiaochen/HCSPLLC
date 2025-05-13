@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Cheng Qiao JLHS Portfolio</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hover-scale {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-radius: 8px;
+        }
+        .portfolio-img2 {
+            max-width: 30%;
+            height: auto;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-radius: 8px;
+        }
+        
+        .portfolio-img:hover {
+            transform: scale(1.03);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .header-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 3px;
+        }
+        
+        .audio-player {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-links a {
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+            transform: translateX(3px);
+        }
+        
+        .project-card {
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .large-section {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+
+<body class="gradient-bg">
+    <header class="header-gradient text-white py-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Cheng Qiao</h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6">James Logan High School Advanced Multimedia Portfolio 2025</h2>
+            <p class="text-lg opacity-90 max-w-2xl mx-auto">Showcasing my creative journey through digital design, animation, and multimedia projects</p>
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
+        <!-- Project 1: College and Career Center Animated GIF -->
+        <section class="project-card hover-scale large-section">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">College & Career Center Animated GIF</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="careers_Cheng_Qiao.gif.gif" alt="College & Career Center Animation" class="portfolio-img">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+I created a 500x2000px animated GIF using Blender for the <a href="https://sites.google.com/nhusd.k12.ca.us/jlhs-college-career-center/home?authuser=0"> Logan College & Career Center website</a>. The piece uses vibrant colors and multiple visual elements to represent the diversity and richness of career and educational pathways. The smooth transitions in the animation highlight the broad range of possibilities for the future. All images used are either original or properly licensed, with Creative Commons attributions noted in the metadata.                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Blender</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Animation</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Motion Graphics</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project 2: Library Sign -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Library Sign</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="Cheng_Qiao Library logo.png" alt="Library Sign Design" class="portfolio-img">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    I designed a 36"x24" library sign based on Ms. Chakrabarti's guidelines, emphasizing readability through high-contrast colors and clear sans-serif fonts. A decorative border was added to enhance visual appeal, and book-themed graphics were included to align with the library's purpose. The design effectively balances aesthetic elements with functional requirements.                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Photoshop</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Blender</span>
+                    <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm">Signage Design</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project 3: Colt Brew Logos -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Colt Brew Logos</h2>
+                <div class="flex flex-wrap mb-6 justify-center gap-4">
+                    <img src="cheng- Colt_Brew.png" alt="Colt Brew Logo" class="portfolio-img2">
+                    <img src="Cheng_CT.png" alt="Colt Tea Logo" class="portfolio-img2">
+                    <img src="Cheng_EE1.png" alt="Emerald Energy Logo" class="portfolio-img2">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    I developed three 2" round beverage labels (Avery 94501) for school-themed drinks: Colt Brew coffee, Emerald Energy drink, and Colt Tea. Each label incorporates school colors and mascot elements to create distinct brand identities. Colt Brew features classic coffee imagery, Emerald Energy showcases dynamic, futuristic designs, and Colt Tea presents natural, calming visuals. All labels were designed using vector graphics to ensure clarity at various sizes.                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm">Logo Design</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Photoshop</span>
+                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Packaging</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project 4: TUPE Fair Flyer -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">TUPE Fair Flyer</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="Cheng_Qiao.png" alt="TUPE Fair Flyer" class="portfolio-img1">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    I designed a public health flyer for the TUPE Fair to promote tobacco-use prevention education. The flyer features bold visuals and high-contrast elements to ensure clarity and readability from a distance. Statistical information is presented in an accessible manner, and the overall layout balances textual and graphical components to effectively engage the student audience.                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Print Design</span>
+                    <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Health Communication</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Photoshop</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project 5: Logan Live Opening Music -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Logan Live Opening Music</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <audio controls class="audio-player">
+                        <source src="Cheng_Qiao_2026.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Using GarageBand, I composed a 7-minute theme for "Logan Live," James Logan High School's news program. The composition combines elements that convey journalistic seriousness with school spirit, incorporating typewriter-like percussion and energetic melodies. Audio levels were meticulously balanced to meet broadcast standards, and multiple versions were produced to suit different segments of the program.                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Audio Production</span>
+                    <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm">GarageBand</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Sound Design</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project 6: The Courier Flag -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">The Courier Flag</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="未标题-1.png" alt="The Courier Flag" class="portfolio-img1">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    I created a 1200x300px web banner for "The James Logan Courier," the school's student newspaper. The design includes the school's address and utilizes a color scheme that aligns with both the school's colors and the existing website. Advanced Photoshop techniques were employed to produce dimensional typography, and all visual elements were either original creations or sourced from properly licensed materials to ensure copyright compliance.                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Web Design</span>
+                    <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Photoshop</span>
+                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Copyright</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project 7: Mr. Foster's Page -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Mr. Foster's Page Logo</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="Cheng_Qiao _2026.gif" alt="Mr. Foster's Page Logo" class="portfolio-img">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    I designed a 600x300px logo for "Mr. Foster's Page," focusing on originality to avoid copyright concerns. Utilizing Photoshop, I transformed simple typography into an engaging visual through the application of layer styles and custom shapes. The logo strikes a balance between professionalism and approachability, incorporating subtle school-themed elements while maintaining a clean, modern look suitable for various digital platforms.                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm">Video Editing</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Digital Branding</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Photoshop</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project 8: Upside-Down Celebrities -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Upside-Down Celebrities</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="ps DDT.png" alt="Upside-Down Celebrities" class="portfolio-img">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Created a surreal photo manipulation exploring facial perception by rotating celebrity images 180 degrees. The project demonstrates advanced Photoshop skills including precise selections, layer masking, and color correction to make inverted faces appear natural. Researched psychological aspects of facial recognition to enhance the unsettling effect. When technical issues arose, adapted by using Pixlr Editor to complete the project, showing problem-solving flexibility.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Photo Manipulation</span>
+                    <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Photoshop</span>
+                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Concept Art</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project 9: Student Art Show Flyer -->
+   
+
+
+        <section class="project-card hover-scale ">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Student Art Show Flyer</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="Chen_Qiao.png" alt="Student Art Show Flyer" class="portfolio-img2">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    I crafted an 8.5x11" portrait-oriented flyer for the Student Art Show held at the Center for the Performing Arts from May 5th to 9th. Incorporating artistic elements that reflect the creativity of the exhibiting students. Key details, such as the Opening Night reception and exhibit dates, are prominently displayed to inform and attract attendees.                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Print Design</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Event Promotion</span>
+                    <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm">Monochrome Design</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Cheng Qiao</h3>
+                <p class="text-gray-400">Advanced Multimedia Portfolio<br>James Logan High School</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact</h3>
+                <ul class="space-y-2">
+                    <li><a href="mailto:example@student.union.k12.ca.us" class="text-gray-400 hover:text-white transition-colors"><i class="fas fa-envelope mr-2"></i>School Email</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fas fa-globe mr-2"></i>Personal Website</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Follow</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-gray-800 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Cheng Qiao. All rights reserved. | Created with passion for design and technology</p>
+        </div>
+    </footer>
+</body>
+
+</html>
